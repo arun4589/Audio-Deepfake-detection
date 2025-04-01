@@ -1,0 +1,6 @@
+Test Loss: 0.2389
+Test Accuracy: 0.8854
+Observations: 
+- The model performs well on the test set, achieving high accuracy.
+- There is a slight drop from validation to test accuracy, indicating potential overfitting.
+- Further noise robustness might improve generalization.
