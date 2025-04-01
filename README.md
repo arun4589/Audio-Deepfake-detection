@@ -48,31 +48,24 @@ The repository is organized as follows:
 audio-deepfake-detection-rawnet2/
 
 ├── README.md                  # Project overview and instructions
-
 ├── setup.py                   # Setup script for the project
-
 ├── requirements.txt           # Python dependencies
-
 ├── data/                      # Dataset folder
 │   ├── README.md              # Dataset description and usage
 │   └── download_dataset.sh    # Script to download and unzip dataset
-
 ├── notebooks/                 # Jupyter notebooks for experimentation
 │   ├── data_preprocessing.ipynb  # Data exploration and preprocessing
 │   ├── model_training.ipynb    # Model training pipeline
 │   └── evaluation.ipynb        # Model evaluation and inference
-
 ├── src/                       # Source code for the project
 │   ├── __init__.py
 │   ├── data_loader.py         # Functions to load and preprocess data
 │   ├── model.py               # Model architecture (RawNet2)
 │   ├── trainer.py             # Model training script
 │   └── evaluate.py            # Model evaluation script
-
 ├── scripts/                   # Shell scripts for training and evaluation
 │   ├── train.sh               # Shell script to train the model
 │   └── evaluate.sh            # Shell script to evaluate the model
-
 └── results/                   # Output folder (logs, checkpoints, reports)
     ├── logs/
     ├── checkpoints/
