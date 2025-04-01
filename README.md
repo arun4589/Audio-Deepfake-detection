@@ -30,3 +30,73 @@ The goal is to implement a robust system for detecting spoofed audio and deployi
    python3 -m venv venv
    source venv/bin/activate  # For Linux/macOS
    venv\Scripts\activate     # For Windows
+Installation
+Clone the repository and install the required dependencies
+git clone https://github.com/yourusername/audio-deepfake-detection-rawnet2.git
+cd audio-deepfake-detection-rawnet2
+pip install -r requirements.txt
+
+
+## Dataset
+The project uses the ASVspoof 2019 dataset for training and evaluation. Follow these steps to download and set up the dataset:
+bash data/download_dataset.sh
+
+The dataset will be downloaded and unzipped into the data/ folder.
+
+## File Structure
+The repository is organized as follows:
+audio-deepfake-detection-rawnet2/
+├── README.md                  # Project overview and instructions
+├── setup.py                   # Setup script for the project
+├── requirements.txt           # Python dependencies
+├── data/                      # Dataset folder
+│   ├── README.md              # Dataset description and usage
+│   └── download_dataset.sh    # Script to download and unzip dataset
+├── notebooks/                 # Jupyter notebooks for experimentation
+│   ├── data_preprocessing.ipynb  # Data exploration and preprocessing
+│   ├── model_training.ipynb    # Model training pipeline
+│   └── evaluation.ipynb        # Model evaluation and inference
+├── src/                       # Source code for the project
+│   ├── __init__.py
+│   ├── data_loader.py         # Functions to load and preprocess data
+│   ├── model.py               # Model architecture (RawNet2)
+│   ├── trainer.py             # Model training script
+│   └── evaluate.py            # Model evaluation script
+├── scripts/                   # Shell scripts for training and evaluation
+│   ├── train.sh               # Shell script to train the model
+│   └── evaluate.sh            # Shell script to evaluate the model
+└── results/                   # Output folder (logs, checkpoints, reports)
+    ├── logs/
+    ├── checkpoints/
+    └── evaluation_report.txt
+
+
+## Training
+To train the model, run the following command:
+
+bash scripts/train.sh
+
+
+This will:
+
+Load the dataset from the data/ folder.
+
+Train the RawNet2 model using the ASVspoof 2019 dataset.
+
+Save the model in the results/checkpoints/ directory.
+
+## Evaluation
+After training, you can evaluate the model on the test dataset by running:
+
+bash scripts/evaluate.sh
+This will:
+
+Load the trained model from the results/checkpoints/ directory.
+
+Evaluate the model on the test set.
+
+Save the evaluation results in results/evaluation_report.txt.
+
+## Results
+Evaluation results, including model performance on the test set, are saved in the results/evaluation_report.txt file. You can review the test accuracy, loss, and observations about the model's performance
+
